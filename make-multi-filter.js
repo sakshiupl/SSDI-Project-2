@@ -38,7 +38,7 @@ arrayFilterer1(
   function (currentArray) {
     console.log(this);
     console.log(currentArray); 
-  }
+  },
 );
 
 // Call arrayFilterer1 (without a callback function) to filter out elements not equal to 3
