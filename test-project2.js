@@ -95,6 +95,7 @@
       });
     }
   }
+  console.log('Test MakeMultiFilter:', p1Message);	
 
   // ********************* Test TemplateProcessor
   if (typeof TemplateProcessor !== 'function') {
@@ -116,6 +117,7 @@
     varDeclared.push('dictionary');
     varDeclared.push('str');
   }
+  console.log('Test TemplateProcessor:', p2Message);	
 
   // ********************* Test to see if the symbols we defined are in the global address space
   varDeclared.forEach(function (sym) {
@@ -124,7 +126,7 @@
       p3Message = 'FAILURE';
     }
   });
-
+  console.log('Test Problem 3:', p3Message);
   // Store the result back into the global space under the object name Project2Results
   window.Project2Results = {
     p1Message: p1Message,
