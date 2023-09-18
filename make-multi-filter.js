@@ -28,3 +28,23 @@ function MakeMultiFilter(originalArray) {
   return arrayFilterer;
 }
 
+const arrayFilterer1 = MakeMultiFilter([1, 2, 3]);
+//Call arrayFilterer1 (with a callback function) to filter out elements not equal to 2
+
+arrayFilterer1(
+  function (elem) {
+    return elem !== 2; // check if element is not equal to 2
+  },
+  function (currentArray) {
+    console.log(this);
+    console.log(currentArray); 
+  }
+);
+
+// Call arrayFilterer1 (without a callback function) to filter out elements not equal to 3
+const filteredArray = arrayFilterer1(function (elem) {
+  return elem !== 3; // check if element is not equal to 3
+})();
+
+console.log('Filtered Array:', filteredArray); 
+
